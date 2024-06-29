@@ -70,6 +70,13 @@ Tab:AddButton({
 
 Tab:AddLabel("everything below is developer tools please no touchy oke???")
 
+Tab:AddButton({
+	Name = "get pos",
+	Callback = function()
+      		warn("erm not here yet bozo")
+  	end    
+})
+
 Tab2:AddButton({
 	Name = "make me afk pplace pls",
 	Callback = function()
