@@ -10,7 +10,7 @@ local mouse = player:GetMouse()
  
 game:GetService("GuiService"):ClearError()
  
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/suspendmyagainloldoit/ALL-HUBS/main/GUI%20STABLE"))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion"))()
 
 Tab:AddLabel("everything below is developer tools please no touchy oke???")
 
