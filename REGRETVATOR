@@ -1,0 +1,149 @@
+ if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+ 
+ 
+ 
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+ 
+ 
+game:GetService("GuiService"):ClearError()
+ 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+ 
+ 
+ 
+ local Window = OrionLib:MakeWindow({Name = "regretvaor is cewl!!!", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+ 
+                local Tab = Window:MakeTab({
+                    Name = "Home",
+                    Icon = "http://www.roblox.com/asset/?id=4370345144",
+                    PremiumOnly = false
+                })
+
+                local Tab2 = Window:MakeTab({
+                    Name = "MAIN",
+                    Icon = "rbxassetid://7734068495",
+                    PremiumOnly = false
+                    })
+
+                local Tab3 = Window:MakeTab({
+                    Name = "Green balz flood",
+                    Icon = "rbxassetid://7734037784",
+                    PremiumOnly = false
+                    })
+
+                local Tab4 = Window:MakeTab({
+                    Name = "droppa farm",
+                    Icon = "rbxassetid://7733672831",
+                    PremiumOnly = false
+                    })
+
+                local Tab5 = Window:MakeTab({
+                    Name = "stone collection (beta)",
+                    Icon = "rbxassetid://7734052925",
+                    PremiumOnly = false
+                    })
+
+
+
+Tab:AddLabel("Rob is cool")
+ 
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Infinite%20Yield%20but%20with%20secure%20dex'))()
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Destroy GUI",
+	Callback = function()
+      		OrionLib:Destroy()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "make me afk pplace pls",
+	Callback = function()
+      		local Instance = Instance.new("Part")
+Instance.Parent = workspace
+Instance.Anchored = true
+Instance.Size = Vector3.new(99999,25,9999)
+Instance.Position = Vector3.new(10000,0,10000)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame * CFrame.new(0,25,0)
+  	end    
+})
+
+
+Tab2:AddToggle({
+    Name = "pls keep me at afk place",
+    Default = false,
+    Callback= function(Value)
+        Cmitton = Value
+        while Cmitton do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10004, 15, 9994)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10004, 15, 9994)
+            
+        end
+    end
+})
+
+Tab2:AddToggle({
+    Name = "TEAPOT AUTO FARM",
+    Default = false,
+    Callback= function(Value)
+        Cmitton = Value
+        while Cmitton do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
+            
+        end
+    end
+})
+
+Tab4:AddButton({
+	Name = "take me to end of dropper lvl",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, -522, 24)
+  	end    
+})
+
+
+Tab3:AddButton({
+	Name = "PLES SEND ME TO GREEN BALL FLOOD SAFE PLACE",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61, 51, 27)
+  	end    
+})
+
+Tab5:AddToggle({
+    Name = "click all em stones!",
+    Default = false,
+    Callback= function(Value)
+        skirib = Value
+        while skirib do
+
+            local therock = game:FindFirstChild("Stone")
+
+            therock:fireclickdetector(ClickDetector)
+            
+            
+        end
+    end
+})
+
+Tab2:AddButton({
+	Name = "finish split place",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-198, 7, -11)
+  	end    
+})
+
+
+ 
