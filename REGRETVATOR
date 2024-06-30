@@ -52,7 +52,8 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/susp
 
 
 
-Tab:AddLabel("Rob is cool")
+Tab:AddLabel("all credits to guy that exists for the gui")
+Tab:AddLabel("the rest of the script made by me tho :)")
  
 Tab:AddButton({
 	Name = "Infinite Yield",
