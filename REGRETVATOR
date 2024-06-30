@@ -83,8 +83,8 @@ Tab2:AddButton({
       		local Instance = Instance.new("Part")
 Instance.Parent = workspace
 Instance.Anchored = true
-Instance.Size = Vector3.new(99999,25,9999)
-Instance.Position = Vector3.new(10000,0,10000)
+Instance.Size = Vector3.new(999999,25,99999)
+Instance.Position = Vector3.new(100000,0,100000)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame * CFrame.new(0,25,0)
   	end    
