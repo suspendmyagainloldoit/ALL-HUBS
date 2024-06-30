@@ -171,4 +171,19 @@ Tab2:AddButton({
   	end    
 })
 
+Tab2:AddButton({
+	Name = "GET ME OUT OF THIS INCINRATER PLEESSSSS",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-594, 1, 24)
+  	end    
+})
 
+
+
+Tab6:AddButton({
+	Name = "rock safe place",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(466, 67, -272)
+  	end    
+})
+ 
