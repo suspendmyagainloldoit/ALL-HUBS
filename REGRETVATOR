@@ -104,9 +104,9 @@ Tab2:AddToggle({
     Callback= function(Value)
         Cmitton = Value
         while Cmitton do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10004, 15, 9994)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
             wait(0.5)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10004, 15, 9994)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
             
         end
     end
@@ -118,9 +118,9 @@ Tab2:AddToggle({
     Callback= function(Value)
         Cmitton = Value
         while Cmitton do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
             wait(0.5)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
             
         end
     end
