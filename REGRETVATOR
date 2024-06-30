@@ -171,9 +171,4 @@ Tab2:AddButton({
   	end    
 })
 
-Tab6:AddButton({
-	Name = "THE ROCKKK safe zone",
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(466, 67, -272)
-  	end    
-})
- 
+
