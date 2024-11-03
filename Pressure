@@ -1,1 +1,765 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/suspendmyagainloldoit/ALL-HUBS/refs/heads/main/ExcTest"))()
+ 
+ 
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+ 
+ 
+--[[ // START OF SCRIPT \\ ]]
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+
+game:GetService("GuiService"):ClearError()
+ 
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/suspendmyagainloldoit/ALL-HUBS/main/GUI%20STABLE"))()
+
+
+
+
+
+ 
+ 
+ 
+ local Window = OrionLib:MakeWindow({Name = "im under pressure", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+ 
+                local Tab = Window:MakeTab({
+                    Name = "Home",
+                    Icon = "http://www.roblox.com/asset/?id=4370345144",
+                    PremiumOnly = false
+                })
+
+                local Tab2 = Window:MakeTab({
+                    Name = "Main",
+                    Icon = "rbxassetid://7734068495",
+                    PremiumOnly = false
+                    })
+
+                local Tab3 = Window:MakeTab({
+                Name = "Antis",
+                Icon = "rbxassetid://7734068495",
+                PremiumOnly = false
+                })
+
+                local Tab4 = Window:MakeTab({
+                    Name = "ESP",
+                    Icon = "rbxassetid://7733774602",
+                    PremiumOnly = false
+                    })
+
+                    
+
+Tab:AddLabel("all credits to guy that exists for the gui")
+Tab:AddLabel("the rest of the script made by me tho :)")
+ 
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Destroy GUI",
+	Callback = function()
+      		OrionLib:Destroy()
+  	end    
+})
+
+Tab:AddLabel("everything below is developer tools please no touchy oke???")
+
+Tab:AddButton({
+	Name = "get pos",
+	Callback = function()
+      		warn("erm not here yet bozo")
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "make me afk pplace pls",
+	Callback = function()
+      		local Instance = Instance.new("Part")
+Instance.Parent = workspace
+Instance.Anchored = true
+Instance.Size = Vector3.new(999999,25,99999)
+Instance.Position = Vector3.new(100000,0,100000)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame * CFrame.new(0,25,0)
+  	end    
+})
+
+
+Tab2:AddToggle({
+    Name = "pls keep me at afk place",
+    Default = false,
+    Callback= function(Value)
+        Cmitton = Value
+        while Cmitton do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            
+        end
+    end
+})
+
+--[[ // ANTIS \\ ]]
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+Tab3:AddToggle({
+    Name = "Auto Hide (turn on anti Pandemonium with this)",
+    Default = false,
+    Callback= function(Value)
+        AutoHide = Value
+        while AutoHide do
+
+
+
+            local Entity = game.Workspace:FindFirstChild("Angler")
+            local Entity2 = game.workspace:FindFirstChild("Pinkie")
+            local Entity3 = game.workspace:FindFirstChild("ChainSmoker")
+            local Entity4 = game.workspace:FindFirstChild("Froger")
+            local Entity5 = game.workspace:FindFirstChild("Blitz")
+
+            if Entity or Entity2 or Entity3 or Entity3 or Entity4 or Entity5 then
+
+
+                local Instance = Instance.new("Part")
+                Instance.Name = "Up"
+                Instance.Parent = game.workspace
+                Instance.Size = Vector3.new(5,1,5)
+                Instance.Position = Vector3.new(9999,99,9999)
+                Instance.Anchored = true
+
+
+                local player = game.Players.LocalPlayer
+                
+
+
+                
+
+
+
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame
+
+                local character = player.Character
+                if character then
+                    for _, part in character:GetChildren() do
+                        if part:IsA("BasePart") then
+                            part.Anchored = true
+                        end
+                    end
+                end
+
+                Up:Destroy()
+
+
+
+
+
+                
+                Entity.ChildRemoved:Connect(function(child)
+	              if child == part then
+		            
+	              end
+                end)
+
+                
+
+                
+
+
+
+
+                
+
+            end
+
+            
+
+
+            wait(1)
+
+
+
+
+        end
+    end
+})
+
+Tab3:AddToggle({
+    Name = "Anti Pandemonium",
+    Default = false,
+    Callback= function(Value)
+        AntiPand = Value
+        while AntiPand do
+
+
+
+            local part = game.Workspace:FindFirstChild("Pandemonium")
+                
+            if part then
+                part:Destroy()
+                print("Pandemonium Gone")
+            end
+            
+            wait(1)
+
+
+
+
+        end
+    end
+})
+
+--[[ // ESP \\ ]]
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+Tab4:AddToggle({
+	Name = "Currency Esp",
+	Default = false,
+	Callback = function(Value)
+		CurrencyEsp = Value
+		while CurrencyEsp do
+			
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "5Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(0,255,0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(0,255,0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "5$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(0,255,0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				end
+			end
+
+
+            for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "10Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(75, 255, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(75, 255, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "10$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(75, 255, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				end
+			end
+
+
+            for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "15Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(75, 255, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(75, 255, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "15$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(75, 255, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				end
+			end
+
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "25Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(150, 255, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(150, 255, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "15$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(150, 255, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				end
+			end
+
+            for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "50Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(255, 150, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(255, 150, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "50$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(255, 150, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				end
+			end
+
+
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "100Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(255, 100, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(255, 100, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "100$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(255, 100, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+
+
+
+					end
+				
+				end
+			end
+
+
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "200Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(255, 50, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(255, 50, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "100$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(255, 50, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+						
+
+
+
+					end
+				end
+			end
+
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "250Currency" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(255, 0, 0)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(255, 0, 0)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "250$"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(255, 0, 0)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+						
+
+
+
+					end
+				end
+			end
+
+			for _, v in pairs(workspace:GetDescendants()) do
+
+				if v:IsA("Model") then
+
+					if v.Name == "Relic" then
+
+
+
+						local FiveCurHighLight = Instance.new("Highlight")
+						FiveCurHighLight.Parent = v
+						FiveCurHighLight.FillColor = Color3.new(0, 255, 150)
+
+
+
+						local FiveCurShowBoard = Instance.new("BillboardGui")
+						local FiveCurShowDot = Instance.new("Frame")
+						local FiveCurShowLabel = Instance.new("TextLabel")
+
+						FiveCurShowBoard.Parent = v
+						FiveCurShowBoard.Size = UDim2.new(0,100,0,100)
+						FiveCurShowBoard.AlwaysOnTop = true
+
+						FiveCurShowDot.Size = UDim2.new(0,10,0,10)
+						FiveCurShowDot.Parent = FiveCurShowBoard
+						FiveCurShowDot.BackgroundColor = BrickColor.new(0, 255, 150)
+						FiveCurShowDot.Position = UDim2.new(0,40,0,40)
+
+						FiveCurShowLabel.Parent = FiveCurShowBoard
+						FiveCurShowLabel.Position = UDim2.new(0,0,0,50)
+						FiveCurShowLabel.Size = UDim2.new(0,100,0,25)
+						FiveCurShowLabel.TextScaled = true
+						FiveCurShowLabel.Font = Enum.Font.FredokaOne
+						FiveCurShowLabel.Text = "RELIC (500$)"
+						FiveCurShowLabel.BackgroundTransparency = 1
+						FiveCurShowLabel.RichText = true
+						FiveCurShowLabel.TextColor = BrickColor.new(0,255,150)
+						FiveCurShowLabel.TextStrokeColor3 = Color3.new(0,0,0)
+						FiveCurShowLabel.TextStrokeTransparency = 0
+
+
+
+						local FiveCurShowCorner = Instance.new("UICorner")
+						local FiveCurShowStroke = Instance.new("UIStroke")
+
+						FiveCurShowCorner.Parent = FiveCurShowDot
+						FiveCurShowCorner.CornerRadius = UDim.new(8,8)
+
+
+						FiveCurShowStroke.Thickness = 3
+						FiveCurShowStroke.Parent = FiveCurShowDot
+						
+
+
+
+					end
+				end
+			end
+
+
+
+    
+			
+		end
+	end
+})
