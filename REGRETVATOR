@@ -1,4 +1,4 @@
- if not game:IsLoaded() then
+as if not game:IsLoaded() then
     game.Loaded:Wait()
 end
  
@@ -33,28 +33,25 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/susp
                     })
 
                 local Tab3 = Window:MakeTab({
-                    Name = "Green balz flood",
-                    Icon = "rbxassetid://7734037784",
+                    Name = "Safe spots",
+                    Icon = "rbxassetid://7734051769",
                     PremiumOnly = false
                     })
 
                 local Tab4 = Window:MakeTab({
-                    Name = "droppa farm",
-                    Icon = "rbxassetid://7733672831",
+                    Name = "Farms",
+                    Icon = "rbxassetid://7743866529",
                     PremiumOnly = false
                     })
 
                 local Tab5 = Window:MakeTab({
-                    Name = "stone collection (beta)",
-                    Icon = "rbxassetid://7734052925",
+                    Name = "Teleports",
+                    Icon = "rbxassetid://7734021680",
                     PremiumOnly = false
                     })
 
-                local Tab6 = Window:MakeTab({
-                    Name = "THE ROCKKKK",
-                    Icon = "rbxassetid://7734052570",
-                    PremiumOnly = false
-                    })
+
+
 
 
 
@@ -93,7 +90,6 @@ Instance.Anchored = true
 Instance.Size = Vector3.new(999999,25,99999)
 Instance.Position = Vector3.new(100000,1000,100000)
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame * CFrame.new(0,25,0)
   	end    
 })
 
@@ -112,8 +108,40 @@ Tab2:AddToggle({
     end
 })
 
-Tab2:AddToggle({
-    Name = "TEAPOT AUTO FARM",
+Tab3:AddButton({
+	Name = "PLES SEND ME TO GREEN BALL FLOOD SAFE PLACE",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61, 51, 27)
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "finish split place",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-198, 7, -11)
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "GET ME OUT OF THIS INCINRATER PLEESSSSS",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-594, 1, 24)
+  	end    
+})
+
+
+
+Tab3:AddButton({
+	Name = "rock safe place",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(466, 67, -272)
+  	end    
+})
+
+Tab4:AddLabel("Teapots")
+
+Tab4:AddToggle({
+    Name = "Teapotz auto farm",
     Default = false,
     Callback= function(Value)
         Cmitton = Value
@@ -126,6 +154,23 @@ Tab2:AddToggle({
     end
 })
 
+Tab4:AddToggle({
+    Name = "Teapotz TRAVERSAL autofarm [Not working rn]",
+    Default = false,
+    Callback= function(Value)
+        TeapotTravers = Value
+        while TeapotTravers do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304, 7, 22)
+            
+        end
+    end
+})
+
+
+Tab4:AddLabel("MAKE SURE THE DOORS HAVE OPENED BEFORE TELEPORTING!")
+
 Tab4:AddButton({
 	Name = "take me to end of dropper lvl",
 	Callback = function()
@@ -133,50 +178,17 @@ Tab4:AddButton({
   	end    
 })
 
-
-Tab3:AddButton({
-	Name = "PLES SEND ME TO GREEN BALL FLOOD SAFE PLACE",
+Tab5:AddButton({
+	Name = "Safe spot",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61, 51, 27)
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 1015, 100000)
   	end    
 })
 
-Tab5:AddToggle({
-    Name = "click all em stones!",
-    Default = false,
-    Callback= function(Value)
-        skirib = Value
-        while skirib do
-
-            local therock = game:FindFirstChild("Stone")
-
-            therock:fireclickdetector(ClickDetector)
-            
-            
-        end
-    end
-})
-
-Tab2:AddButton({
-	Name = "finish split place",
+Tab5:AddButton({
+	Name = "Elevator (may or may not be safe idk)",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-198, 7, -11)
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4, 5, 23)
   	end    
 })
 
-Tab2:AddButton({
-	Name = "GET ME OUT OF THIS INCINRATER PLEESSSSS",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-594, 1, 24)
-  	end    
-})
-
-
-
-Tab6:AddButton({
-	Name = "rock safe place",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(466, 67, -272)
-  	end    
-})
- 
