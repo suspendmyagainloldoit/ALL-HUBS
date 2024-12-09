@@ -91,7 +91,7 @@ Tab2:AddButton({
 Instance.Parent = workspace
 Instance.Anchored = true
 Instance.Size = Vector3.new(999999,25,99999)
-Instance.Position = Vector3.new(100000,0,100000)
+Instance.Position = Vector3.new(100000,1000,100000)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Instance.CFrame * CFrame.new(0,25,0)
   	end    
@@ -104,9 +104,9 @@ Tab2:AddToggle({
     Callback= function(Value)
         Cmitton = Value
         while Cmitton do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 1015, 100000)
             wait(0.5)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 15, 100000)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 1015, 100000)
             
         end
     end
