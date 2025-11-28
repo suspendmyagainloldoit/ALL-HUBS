@@ -703,7 +703,6 @@ local Icons = {
     ["Arriva_logo.svg"] = 304905353,
 }
 
-
 local function GetIcon(IconName)
 	if Icons[IconName] ~= nil then
 		return Icons[IconName]
