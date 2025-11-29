@@ -977,17 +977,17 @@ end)
 
 -- ===== FIXED: Button element (critical) =====
 CreateElement("Button", function()
-	local Button = Create("TextButton", {
-		Text = "",
-		AutoButtonColor = false,
-		BackgroundTransparency = 1,
-		BorderSizePixel = 0,
-		Size = UDim2.new(1, 0, 1, 0), -- ensure button covers parent so it can receive input
-		ZIndex = 50,
-		ClipsDescendants = false
-	})
-	return Button
+    local Button = Create("TextButton", {
+        Text = "",
+        AutoButtonColor = false,
+        BackgroundTransparency = 1,
+        BorderSizePixel = 0,
+        Size = UDim2.new(1,0,1,0),
+        ZIndex = 50
+    })
+    return Button
 end)
+
 
 -- ===== FIXED: ScrollFrame auto canvas updater =====
 CreateElement("ScrollFrame", function(Color, Width)
